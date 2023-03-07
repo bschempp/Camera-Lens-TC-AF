@@ -32,22 +32,6 @@
                     Command="{Binding CalibrateLens, UpdateSourceTrigger=PropertyChanged}"
                     Content="Calibrate Lens"
                     ToolTip="Recommended to click before every imaging session, resets focus position" />
-
-                <!--
-                <StackPanel
-                    Orientation="Horizontal"
-                    Margin="0,20,0,0">
-                    <TextBlock
-                        Margin="0,2,0,0"
-                        Text="User Temperature:"
-                        ToolTip="User assigned temperature"/>
-                    <TextBox
-                        Margin="5,0,0,5"
-                        Width="50"
-                        Text="{Binding UserTemperature, UpdateSourceTrigger=PropertyChanged}"
-                        ToolTip="User enters temperature from external source"/>
-                </StackPanel>-->
-
             </StackPanel>
         </Grid>
     </DataTemplate>
