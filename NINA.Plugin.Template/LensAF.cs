@@ -100,5 +100,19 @@ namespace LensAF
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(FocusStopPosition)));
             }
         }
+
+        public double UserTemperature
+        {
+            get
+            {
+                return Settings.Default.UserTemperature;
+            }
+            set
+            { 
+                Settings.Default.UserTemperature = value;
+                CoreUtil.SaveSettings(Settings.Default);
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UserTemperature)));
+            }
+        }
     }
 }

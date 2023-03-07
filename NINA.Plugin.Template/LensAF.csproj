@@ -332,6 +332,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -354,7 +357,7 @@
       echo "Creating $(PlatformName) Plugins folder"
       mkdir  "%25localappdata%25\NINA\Plugins"
       )
-      if not exist "%25localappdata%25\NINA\Plugin\$(TargetName)" (
+      if not exist "%25localappdata%25\NINA\Plugins\$(TargetName)" (
       echo "Creating $(PlatformName) Plugins $(TargetName) folder"
       mkdir  "%25localappdata%25\NINA\Plugins\$(TargetName)"
       )

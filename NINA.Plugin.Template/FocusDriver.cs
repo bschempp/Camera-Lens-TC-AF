@@ -159,6 +159,7 @@ namespace LensAF
                     }
                     token.Cancel();
                 });
+                Temperature = Settings.Default.UserTemperature;
                 IsMoving = false;
                 int position = Position;
                 Position = Settings.Default.FocusStopPosition;

@@ -17,9 +17,9 @@
 
     <DataTemplate x:Key="Lens AF_Options">
         <StackPanel DataContext="{Binding}" Orientation="Vertical">
-
+            
             <StackPanel Margin="10,5,5,10" Orientation="Horizontal">
-                <TextBlock Margin="0,2,2,0" Text="Prepare Liveview" />
+                <TextBlock Margin="0,2,6,0" Text="Prepare Liveview" />
                 <CheckBox IsChecked="{Binding PrepareImage}" />
                 <TextBlock Margin="10,2,0,0" Text="  Stretch factor:" />
                 <TextBox
@@ -41,13 +41,25 @@
                 <TextBox xml:space="preserve"
                     Width="50"
                     Margin="5,0,0,5"
-                    Text="{Binding FocusStopPosition, UpdateSourceTrigger=PropertyChanged}"
+                    Text="{Binding FocusStopPosition, UpdateSourceTrigger=LostFocus}"
                     ToolTip="The Lens is moved to the Focus Stop,
 &#x0d;&#x0a;Position is set to this value,
 &#x0d;&#x0a;the Lens is moved to the Target position.
 &#x0d;&#x0a;The final position should be near enough to the optimal focus so that AutoFocus can be successful." />
             </StackPanel>
-
+            
+            <StackPanel Orientation="Horizontal" Margin="480,10,0,0">
+                <TextBlock
+                    Margin="0,2,0,0"
+                    Text="User Temperature:"
+                    ToolTip="User assigned temperature"/>
+                <TextBox
+                    Margin="11,0,0,5"
+                    Width="50"
+                    Text="{Binding UserTemperature, UpdateSourceTrigger=LostFocus}"
+                    ToolTip="User enters temperature from external source"/>
+            </StackPanel>
         </StackPanel>
+        
     </DataTemplate>
 </ResourceDictionary>
