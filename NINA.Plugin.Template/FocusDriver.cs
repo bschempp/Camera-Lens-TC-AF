@@ -159,14 +159,14 @@ namespace LensAF
                     }
                     token.Cancel();
                 });
+                IsMoving = false;
                 Temperature = Settings.Default.UserTemperature;
-                IsMoving = false;
-                int position = Position;
+                //int position = Position;
                 Position = Settings.Default.FocusStopPosition;
-                CancellationToken ct = new CancellationToken();
-                IsMoving = true;
-                await Move(position, ct, 1000);
-                IsMoving = false;
+                //CancellationToken ct = new CancellationToken();
+                //IsMoving = true;
+                //await Move(position, ct, 1000);
+                //IsMoving = false;
                 Notification.ShowSuccess("Calibration finished");
             });
         }

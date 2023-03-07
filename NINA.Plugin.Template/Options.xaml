@@ -59,6 +59,7 @@
                     Text="{Binding UserTemperature, UpdateSourceTrigger=LostFocus}"
                     ToolTip="User enters temperature from external source"/>
             </StackPanel>
+            
         </StackPanel>
         
     </DataTemplate>
